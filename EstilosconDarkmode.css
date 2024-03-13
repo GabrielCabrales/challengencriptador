@@ -1,0 +1,292 @@
+:root{
+    --darkMode: url('https://api.iconify.design/meteocons:starry-night-fill.svg') no-repeat center center / contain;
+    --textAreaColor: rgb(19,38,92);
+    --colorPlaceholder: darkblue;
+    --backgroundTexto: #E5E5E5;
+    --footerColor: rgb(19,38,92);
+    --backgroundMensajes: white;
+    --copiarDesencText: rgb(19,38,92);
+    --copiarDesencBackground: #D8DFE8;
+    --encriptarText: white;
+    --encriptarBackground: rgb(19,38,92);
+    --borderBoton: rgb(19,38,92);
+    --borderState: ridge;
+    --hooverColor: hwb(240 28% 45%);
+    --logo: url("./Imagenes/Logo.png");
+}
+
+.modooscuro{
+    background-color: #1b1b24;
+    color: white;
+    --darkMode: url('https://api.iconify.design/meteocons:clear-day-fill.svg') no-repeat center center / contain;
+    --textAreaColor: white;
+    --colorPlaceholder: white;
+    --backgroundTexto: #1b1b24;
+    --footerColor: white;
+    --backgroundMensajes: #1b1b24;
+    --copiarDesencText: rgb(255, 255, 255);
+    --copiarDesencBackground: hsl(214, 5%, 25%);
+    --encriptarText: white;
+    --encriptarBackground: #3c3c68;
+    --borderState: hidden;
+    --hooverColor: hsl(240, 47%, 23%);
+    --logo: url("./Imagenes/whiteLogo.png")
+}
+.move-left {
+    margin-right: 53%;
+}
+body{
+    background-color: #E5E5E5;
+    font-family: 'inter';
+    transition: 1s;
+}
+
+header :focus{
+    outline-style: none;
+}
+
+.logo{
+    content: var(--logo);
+    margin-top: 40px;
+    margin-left: 40px;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.astro{
+    background: var(--darkMode);
+    height: 50px;
+    width: 50px;
+    margin: 20px 80px auto;
+    float: right;
+    cursor: pointer;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.conteiner{
+    width: 90%;
+    margin: auto;
+}
+
+.texto{
+    height: 50%;
+    margin: 2% auto 0;
+    display: inline-block;
+    font-size: 32px;
+    color: var(--textAreaColor);
+    border: none;
+    background-color: var(--backgroundTexto) ;
+    resize: none;
+    transition: 1s;
+}
+
+textarea:focus{
+    outline: none !important;
+}
+
+::placeholder{
+    color: var(--colorPlaceholder);
+    opacity: 0.5;
+}
+
+.mensajes{
+    float: right;
+    background-color: var(--backgroundMensajes);
+    text-align: center;
+    width: 35%;
+    height: 90%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s;
+}
+
+.mensajes img{
+    width: 80%;
+}
+
+#imagenSinMensaje{
+    visibility: visible;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.mensajes h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mensajes p{
+    margin: 2%;
+    font-size: 16px;
+}
+
+#vacio{
+    padding: 110px 20px;
+}
+
+#resultado{
+    width: 100%;
+    height: 90%;
+    font-size: 24px;
+    color: grey;
+    text-align: left;
+    visibility: visible;
+    background-color: var(--backgroundMensajes);
+    display: none;
+    padding: 67.5px 8px;
+}
+
+#sinMensaje{
+    visibility: visible;
+}
+
+#descripcionSinMensaje{
+    visibility: visible;
+}
+
+.copiar{
+    margin: 2%;
+    width: 40%;
+    padding: 3% 0;
+    font-size: 16px;
+    border: var(--borderState);
+    color: var(--copiarDesencText);
+    background-color: var(--copiarDesencBackground);
+    border-radius: 15px;
+    border-width: thin;
+    border-color: var(--borderBoton);
+    transition: 1s all;
+    cursor: pointer;
+    display: none;
+}
+
+.botones{
+    display: block;
+}
+
+.botones p{
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 1%;
+}
+
+.encriptar{
+
+    margin: auto;
+    width: 20%;
+    padding: 1% 0;
+    font-size: 16px;
+    color: var(--encriptarText);
+    border: none;
+    background-color: var(--encriptarBackground);
+    border-radius: 15px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.desencriptar{
+    margin-left: 2%;
+    width: 20%;
+    padding: 1% 0;
+    font-size: 16px;
+    border: var(--borderState);
+    color: var(--copiarDesencText);
+    background-color: var(--copiarDesencBackground);
+    border-width: thin;
+    border-color: var(--borderBoton);
+    border-radius: 15px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.encriptar:hover, .desencriptar:hover, .copiar:hover{
+    background-color: var(--hooverColor);
+}
+
+footer{
+    text-align: center;
+    margin: 1%;
+    color: var(--footerColor);
+    transition: 1s;
+}
+
+a{
+    color: var(--footerColor);
+    text-decoration-line: none;
+    transition: 1s;
+}
+
+#github:hover, #facebook:hover{
+    text-decoration-line: underline;
+}
+
+
+@media screen and (max-width:1024px){
+
+    .logo{
+        margin: 10% auto;
+    }
+
+    .astro{
+        margin: 20px 20px auto;
+    }
+
+    .texto,.botones{
+        display: block;
+        width: 100%;
+        margin: 5% auto;
+    }
+
+    #texto{
+        height: 5em;
+    }
+
+    #resultado{
+        height: 5em;
+    }
+
+    .mensajes{
+        width: 100%;
+        float: none;
+        display: block;
+        margin: auto;
+    }
+
+    .vacio{
+        padding-top: 3em;
+        padding-bottom: 3em;
+        
+    }
+
+    .encriptar,.desencriptar{
+        width: 45%;
+        margin: 2%;
+        padding: 2% 0;
+    }
+
+    .desencriptar:hover, .copiar:hover{
+        background-color: #D8DFE8;
+    }
+
+    .encriptar:hover{
+        background-color: darkblue;
+    }
+
+    #imagenSinMensaje{
+        display: none;
+    }
+}

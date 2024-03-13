@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador Alura: G6, Next Education</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="EstilosconDarkmode.css">
+        <link rel="icon" href="./Imagenes/aluraLogo.png" type="image/icon type">
+    </head>
+
+    <body>
+        <header>
+            <img alt="Logo de Encriptador Alura" class="logo">
+            <div class="astro"></div>
+        </header>
+
+        <main class="conteiner">
+            <textarea name="text" id="texto" class="texto" cols="35" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+
+            <div class="mensajes" id="mensajes">
+
+                <section class="vacio" id="vacio">
+                    <h1><img src="./Imagenes/Muñeco.png" alt="Imágen de mensaje no encontrado" id="imagenSinMensaje"></h1>
+                    <h2 id="sinMensaje">Ningún mensaje fue encontrado</h2>
+                    <p id="descpripcionSinMensaje">Ingresa el texto que desea encriptar o desencriptar</p>
+                </section>
+                
+                <section>
+                    <textarea name="text" id="resultado" class="texto" cols="50" rows="12"></textarea>
+                    <input type="submit" value="Copiar" class="copiar" id="copiar">
+                </section>
+                
+            </div>
+
+            <section class="botones">
+
+                <p style="font-size: 13px;"><span class="iconify" style="font-size: 25px;" data-icon="streamline-emojis:police-car-light"></span>Solo letras minúsculas y sin acento</p>
+                <input type="submit" value="Encriptar" class="encriptar" id="encriptar">
+                <input type="submit" value="Desencriptar" class="desencriptar" id="desencriptar">
+
+            </section>
+            
+
+        </main>
+
+        <footer>
+            <p class="move-left">By Gabriel Cabrales - Reto de Encriptador: G6 Oracle, Next Education</p> 
+            <p class="move-left"><span class="iconify" data-icon="entypo-social:github"></span> <a id="github" href="https://github.com/GabrielCabrales" target="_blank">Gabriel</a> - <span class="iconify" data-icon="entypo-social:facebook"></span> <a id="facebook" href="https://www.facebook.com/profile.php?id=100000308533200" target="_blank">Gabriel Cabrales</a></p>
+        </footer>
+
+    </body>
+
+    <script src="encriptador.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+</html>
